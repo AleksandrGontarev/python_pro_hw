@@ -66,7 +66,7 @@ def parse_cookie(query: str) -> dict:
     elif "age=" in query:
         age = query.split('age=')[1].split(';')[0]
         if age:
-            if age('age=')[0] != 'name=':
+            if age[0] != 'name=':
                 cookie['age'] = age
     return cookie
 
